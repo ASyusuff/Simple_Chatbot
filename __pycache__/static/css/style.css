@@ -1,0 +1,82 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chatbox {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#chatbox p {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+}
+
+#chatbox p strong {
+    color: #2c3e50;
+}
+
+#chatbox p.bot {
+    background-color: #dfe6e9;
+    text-align: left;
+}
+
+#chatbox p.user {
+    background-color: #b2bec3;
+    text-align: right;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2ecc71;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}

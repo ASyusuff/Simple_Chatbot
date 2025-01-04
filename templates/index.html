@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../templates/style.css">
+    <title>AI Chatbot</title>
+</head>
+<body>
+    <style>
+        /* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #46719b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #e1e1e1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chatbox {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #393838;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#chatbox p {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #202020;
+}
+
+#chatbox p strong {
+    color: #fe5602;
+}
+
+#chatbox p.bot {
+    background-color: #ffffff;
+    text-align: left;
+}
+
+#chatbox p.user {
+    background-color: #f5f5f5;
+    text-align: right;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ec510e;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e1e40d;
+}
+
+    </style>
+
+    <!-- Language selection -->
+    <div>
+        <label for="language-select">Select Language: </label>
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="id">Indonesian</option>
+        </select>
+    </div>
+
+    <h1>AI Chatbot</h1>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Type your message" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="chatbox"></div>
+
+    <script>
+         // Language selection
+        let selectedLang = "en";
+        document.getElementById("language-select").onchange = function() {
+            selectedLang = this.value; // Update selected language
+        };
+
+        document.getElementById("chat-form").onsubmit = function(e) {
+            e.preventDefault();
+            
+            const userInput = document.getElementById("user-input").value;
+            
+            fetch('/get_response', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `user_input=${userInput}&lang=${selectedLang}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                const chatbox = document.getElementById("chatbox");
+                chatbox.innerHTML += `<p class="user"><strong>You:</strong> ${userInput}</p>`;
+                chatbox.innerHTML += `<p class="bot"><strong>Bot:</strong> ${data.response}</p>`;
+                document.getElementById("user-input").value = '';  // Clear input field
+                chatbox.scrollTop = chatbox.scrollHeight;  // Scroll to the bottom
+            });
+        }
+    </script>
+</body>
+</html>

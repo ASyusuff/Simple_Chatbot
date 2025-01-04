@@ -1,0 +1,103 @@
+{
+    "greetings": {
+      "en": [
+        "Hello!", 
+        "Hi there!", 
+        "Hey! How can I help you?", 
+        "Good day! What can I do for you?"
+      ],
+      "id": [
+        "Halo!", 
+        "Hai di sana!", 
+        "Hei! Bagaimana saya bisa membantu Anda?", 
+        "Selamat siang! Apa yang bisa saya lakukan untuk Anda?"
+      ]
+    },
+    "introduction": {
+      "en": [
+        "I'm a simple AI chatbot. Nice to meet you!",
+        "I'm here to assist you with basic conversations.",
+        "I'm an AI created to chat with you. How can I help?"
+      ],
+      "id": [
+        "Saya adalah chatbot AI sederhana. Senang bertemu dengan Anda!",
+        "Saya di sini untuk membantu Anda dengan percakapan dasar.",
+        "Saya adalah AI yang dibuat untuk mengobrol dengan Anda. Bagaimana saya bisa membantu?"
+      ]
+    },
+    "farewell": {
+      "en": [
+        "Goodbye!", 
+        "See you later!", 
+        "Take care!", 
+        "Bye! Have a great day!"
+      ],
+      "id": [
+        "Selamat tinggal!", 
+        "Sampai jumpa!", 
+        "Jaga diri baik-baik!", 
+        "Dadah! Semoga harimu menyenangkan!"
+      ]
+    },
+    "help": {
+      "en": [
+        "I'm here to help you. You can ask me about my features.",
+        "Need help? Just ask me anything about our conversation topics.",
+        "I'm a basic chatbot, here to assist you with some questions."
+      ],
+      "id": [
+        "Saya di sini untuk membantu Anda. Anda dapat bertanya tentang fitur saya.",
+        "Butuh bantuan? Tanyakan saja apa pun tentang topik percakapan kita.",
+        "Saya adalah chatbot sederhana yang siap membantu Anda dengan beberapa pertanyaan."
+      ]
+    },
+    "weather": {
+      "en": [
+        "The weather is great today!",
+        "It's a bit cloudy, but nice overall.",
+        "It looks like it's going to rain. Don't forget your umbrella!"
+      ],
+      "id": [
+        "Cuacanya sangat bagus hari ini!",
+        "Agak mendung, tapi tetap menyenangkan.",
+        "Sepertinya akan turun hujan. Jangan lupa bawa payung!"
+      ]
+    },
+    "hobbies": {
+      "en": [
+        "I enjoy chatting with people like you!",
+        "I like learning new things and improving myself.",
+        "I spend my time understanding human language."
+      ],
+      "id": [
+        "Saya senang mengobrol dengan orang seperti Anda!",
+        "Saya suka mempelajari hal-hal baru dan meningkatkan diri.",
+        "Saya menghabiskan waktu saya untuk memahami bahasa manusia."
+      ]
+    },
+    "gratitude": {
+      "en": [
+        "You're welcome!",
+        "No problem at all!",
+        "Happy to help!"
+      ],
+      "id": [
+        "Sama-sama!",
+        "Tidak masalah sama sekali!",
+        "Senang bisa membantu!"
+      ]
+    },
+    "smalltalk": {
+      "en": [
+        "I'm just a simple chatbot, but I'm always learning!",
+        "What about you? What do you like to do?",
+        "Tell me more about your interests!"
+      ],
+      "id": [
+        "Saya hanya chatbot sederhana, tetapi saya selalu belajar!",
+        "Bagaimana dengan Anda? Apa yang Anda sukai?",
+        "Ceritakan lebih banyak tentang minat Anda!"
+      ]
+    }
+  }
+  
